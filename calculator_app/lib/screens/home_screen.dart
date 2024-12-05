@@ -1,4 +1,5 @@
 import 'package:calculator_app/constants/color.dart';
+import 'package:calculator_app/widgets/button.dart';
 import 'package:calculator_app/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -25,10 +26,16 @@ class HomeScreen extends StatelessWidget {
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
             decoration: const BoxDecoration(
-              color: darkGrey,
-              borderRadius: BorderRadius.vertical(top: Radius.circular(30)) 
+                color: darkGrey,
+                borderRadius: BorderRadius.vertical(top: Radius.circular(30))),
+            child: const Column(
+              children: [
+                Row(
+                  children: [Button1()],
+                )
+              ],
             ),
-          )
+          ),
         ],
       ),
     );
