@@ -1,3 +1,4 @@
+import 'package:calculator_app/constants/color.dart';
 import 'package:calculator_app/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenHeight = MediaQuery.sizeOf(context).height;
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -14,11 +16,19 @@ class HomeScreen extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: const Column(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomTextField(),
-          
+          const CustomTextField(),
+          Container(
+            height: screenHeight * 0.55,
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
+            decoration: const BoxDecoration(
+              color: darkGrey,
+              borderRadius: BorderRadius.vertical(top: Radius.circular(30)) 
+            ),
+          )
         ],
       ),
     );
