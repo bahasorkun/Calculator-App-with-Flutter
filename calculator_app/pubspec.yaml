@@ -31,7 +31,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  function_tree: ^0.9.1
   gap: ^3.0.1
+  provider: ^6.1.2
   spacer: ^1.0.0
 
 dev_dependencies:
